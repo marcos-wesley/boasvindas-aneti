@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Arte ANETI</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Arte de Boas-Vindas ANETI</h1>
+        <form id="art-form">
+            <div class="form-group">
+                <label for="photo">Upload da Foto (PNG ou JPG):</label>
+                <input type="file" id="photo" accept=".png, .jpg, .jpeg" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" placeholder="Seu Nome Completo" required>
+            </div>
+            <div class="form-group">
+                <label for="city">Cidade:</label>
+                <input type="text" id="city" placeholder="Sua Cidade" required>
+            </div>
+            <div class="form-group">
+                <label for="state">Estado (UF):</label>
+                <select id="state" required>
+                    <option value="">Selecione a UF</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="membership-level">Nível de Associação:</label>
+                <select id="membership-level" required>
+                    <option value="">Selecione o nível</option>
+                    <option value="publico">Público</option>
+                    <option value="junior">Júnior</option>
+                    <option value="pleno">Pleno</option>
+                    <option value="senior">Sênior</option>
+                </select>
+            </div>
+            <button type="submit">Gerar minha arte</button>
+        </form>
+        <div id="preview-container">
+            <h2>Pré-visualização:</h2>
+            <canvas id="art-preview"></canvas>
+        </div>
+    </div>
+    <script src="src/js/script.js"></script>
+</body>
+</html>
+
